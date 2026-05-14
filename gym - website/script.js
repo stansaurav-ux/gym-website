@@ -2,7 +2,6 @@ function toggleMenu() {
   document.getElementById("nav-links").classList.toggle("active");
 }
 
-// Single clean openModal function
 function openModal(img, name, role, desc) {
   document.getElementById("modal").style.display = "flex";
   document.getElementById("modal-img").src = img;
@@ -15,15 +14,16 @@ function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
 
-// Scroll animation
-const elements = document.querySelectorAll("section, .card, .trainer-card, .program-card");
+// Scroll animation - only target cards, NOT sections
+const elements = document.querySelectorAll(".card, .trainer-card, .program-card");
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add("show");
     }
   });
-});
+}, { threshold: 0.1 });
+
 elements.forEach(el => {
   el.classList.add("hidden");
   observer.observe(el);
@@ -32,8 +32,9 @@ elements.forEach(el => {
 function toggleTheme() {
   document.body.classList.toggle("light");
 }
-const cards = document.querySelectorAll('.card, .trainer-card, .program-card');
 
+// Touch effect
+const cards = document.querySelectorAll('.card, .trainer-card, .program-card');
 cards.forEach(card => {
   card.addEventListener('touchstart', () => {
     card.style.transform = 'translateY(-10px)';
