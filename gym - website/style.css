@@ -633,3 +633,10 @@ body::before {
   font-size: 26px;
   color: white;
 }
+@media (hover: none) {
+  .card:active,
+  .trainer-card:active,
+  .program-card:active {
+    transform: translateY(-10px);
+  }
+}
