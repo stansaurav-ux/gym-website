@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gym Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <button onclick="toggleTheme()" class="theme-btn">🌓</button>
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  <ul id="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#trainers">Trainers</a></li>
+    <li><a href="#programs">Programs</a></li>
+  </ul>
+</nav>
+
+<section class="hero" id="home">
+  <h4>ELITE FITNESS CLUB</h4>
+  <h1>BUILD YOUR DREAM BODY</h1>
+  <p>Transform your physique with expert trainers, modern equipment, and personalized workout plans.</p>
+  <div class="buttons">
+    <a href="#pricing" class="btn primary">Join Now</a>
+    <a href="#programs" class="btn secondary">View Plans</a>
+  </div>
+</section>
+
+<section class="pricing" id="pricing">
+  <h2>MEMBERSHIP PLANS</h2>
+  <div class="pricing-container">
+    <div class="card">
+      <h3>Basic</h3>
+      <h1>Rs 2000</h1>
+      <p>Per Month</p>
+      <ul>
+        <li>Gym Access</li>
+        <li>1 Trainer Session</li>
+        <li>Free WiFi</li>
+      </ul>
+      <button>Choose Plan</button>
+    </div>
+    <div class="card popular">
+      <h3>Premium</h3>
+      <h1>Rs 3500</h1>
+      <p>Per Month</p>
+      <ul>
+        <li>All Basic Features</li>
+        <li>Personal Trainer</li>
+        <li>Diet Plan</li>
+      </ul>
+      <button>Choose Plan</button>
+    </div>
+    <div class="card">
+      <h3>Elite</h3>
+      <h1>Rs 5000</h1>
+      <p>Per Month</p>
+      <ul>
+        <li>24/7 Access</li>
+        <li>Private Coaching</li>
+        <li>VIP Support</li>
+      </ul>
+      <button>Choose Plan</button>
+    </div>
+  </div>
+</section>
+
+<section class="trainers" id="trainers">
+  <h2>MEET OUR TRAINERS</h2>
+  <div class="trainer-container">
+
+    <div class="trainer-card" onclick="openModal('images/trainer1.jpg', 'John Shrestha', 'Strength Coach', 'Expert in strength and powerlifting.')">
+      <img src="images/trainer1.jpg" alt="Trainer">
+      <h3>John Shrestha</h3>
+      <p>Strength Coach</p>
+    </div>
+
+    <div class="trainer-card" onclick="openModal('images/trainer2.jpg', 'Abiral Shrestha', 'Fitness Trainer', 'Expert in fat loss, cardio training and functional fitness.')">
+      <img src="images/trainer2.jpg" alt="Trainer">
+      <h3>Abiral Shrestha</h3>
+      <p>Fitness Trainer</p>
+    </div>
+
+    <div class="trainer-card" onclick="openModal('images/trainer3.jpg', 'Ashton Hall', 'Bodybuilding Expert', 'Focuses on hypertrophy, physique building and competition prep.')">
+      <img src="images/trainer3.jpg" alt="Trainer">
+      <h3>Ashton Hall</h3>
+      <p>Bodybuilding Expert</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="programs" id="programs">
+  <h2>OUR PROGRAMS</h2>
+  <div class="program-container">
+    <div class="program-card">
+      <h3>Strength Training</h3>
+      <p>Build muscle and increase overall power.</p>
+    </div>
+    <div class="program-card">
+      <h3>Cardio Fitness</h3>
+      <p>Improve endurance and burn calories fast.</p>
+    </div>
+    <div class="program-card">
+      <h3>Bodybuilding</h3>
+      <p>Professional physique-focused workouts.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <h2>FITNESS GYM</h2>
+  <p>Transform your body. Transform your life.</p>
+  <p class="copy">© 2026 Fitness Gym. All rights reserved.</p>
+</footer>
+
+<!-- SINGLE MODAL ONLY -->
+<div id="modal" class="modal" onclick="closeModal()">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <span class="close" onclick="closeModal()">×</span>
+    <img id="modal-img" src="" alt="Trainer">
+    <h2 id="modal-name"></h2>
+    <p id="modal-role"></p>
+    <p id="modal-desc"></p>
+  </div>
+</div>
+
+<!-- script once only -->
+<script src="script.js"></script>
+
+</body>
+</html>
