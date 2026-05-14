@@ -525,9 +525,9 @@ img {
   transition: transform 0.3s ease;
 }
 
-.card:hover,
-.trainer-card:hover,
-.program-card:hover {
+.card:hover, .card:active,
+.trainer-card:hover, .trainer-card:active,
+.program-card:hover, .program-card:active {
   transform: translateY(-10px);
 }
 h2 {
