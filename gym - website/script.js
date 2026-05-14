@@ -32,3 +32,13 @@ elements.forEach(el => {
 function toggleTheme() {
   document.body.classList.toggle("light");
 }
+const cards = document.querySelectorAll('.card, .trainer-card, .program-card');
+
+cards.forEach(card => {
+  card.addEventListener('touchstart', () => {
+    card.style.transform = 'translateY(-10px)';
+  });
+  card.addEventListener('touchend', () => {
+    card.style.transform = 'translateY(0)';
+  });
+});
