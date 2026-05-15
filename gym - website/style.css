@@ -643,3 +643,6 @@ body::before {
     transform: translateY(-10px);
   }
 }
+.card {
+  border: 2px solid red;
+}
