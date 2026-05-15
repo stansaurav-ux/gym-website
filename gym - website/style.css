@@ -122,7 +122,12 @@ button {
 }
 
 
-nav, .hero {
+nav {
+  position : fixed;
+  z-index: 99999;
+}
+
+.hero {
   position: relative;
   z-index: 1;
 }
@@ -447,6 +452,7 @@ img {
 
   nav ul.active {
     display: flex;
+    z-index: 99999;
   }
 }
 
